@@ -49,8 +49,9 @@ const sendVerficationToken = ({ email, verificationToken }) => {
     from: "Book App pvt lt",
     to: email,
     subject: "Email verfication for Book App",
-    html: `Click <a href="https://book-app-nodejs-production.up.railway.app/api/${verificationToken}">Here!! </a>to authenticate your email with Books App`,
+    html: `Click <a href="https://library-management-system-nodejs-production.up.railway.app/api/${verificationToken}">Here!! </a>to authenticate your email with Books App`,
   };
+
 
   transpoter.sendMail(mailOptions, function (err, response) {
     if (err) throw err;
@@ -74,7 +75,7 @@ function sendResetPasswordLink({ email, resetPasswordToken }) {
     from: "Book App pvt lt",
     to: email,
     subject: "Reset Your Password",
-    html: `Click <a href="https://book-app-nodejs-production.up.railway.app/forgot-password/${resetPasswordToken}">Here!!</a> to Reset Password`,
+    html: `Click <a href="https://library-management-system-nodejs-production.up.railway.app/forgot-password/${resetPasswordToken}">Here!!</a> to Reset Password`,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
